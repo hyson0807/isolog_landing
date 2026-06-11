@@ -5,7 +5,7 @@ import { trackDownloadClick } from "@/lib/track";
 
 function AppleIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7" aria-hidden>
+    <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden>
       <path d="M17.05 12.54c-.03-2.89 2.36-4.27 2.47-4.34-1.34-1.96-3.43-2.23-4.18-2.26-1.78-.18-3.47 1.05-4.37 1.05-.9 0-2.29-1.02-3.77-1-1.94.03-3.72 1.13-4.72 2.86-2.01 3.49-.51 8.66 1.45 11.49.96 1.39 2.1 2.94 3.6 2.89 1.45-.06 1.99-.93 3.74-.93s2.24.93 3.77.9c1.56-.03 2.54-1.41 3.49-2.81 1.1-1.61 1.55-3.17 1.58-3.25-.04-.02-3.03-1.16-3.06-4.6zM14.17 4.06c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.37 1.74-.74.85-1.39 2.22-1.22 3.53 1.29.1 2.6-.65 3.4-1.61z" />
     </svg>
   );
@@ -37,14 +37,16 @@ function Badge({ href, platform, topLine, bottomLine, icon }: BadgeProps) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackDownloadClick(platform)}
-      className="flex h-14 w-44 items-center justify-center gap-2.5 rounded-xl bg-gray-900 text-white shadow-sm transition duration-200 hover:scale-[1.04] hover:bg-black hover:shadow-lg active:scale-[0.98] motion-reduce:transform-none"
+      className="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gray-900 px-2 text-white shadow-sm transition duration-200 hover:scale-[1.04] hover:bg-black hover:shadow-lg active:scale-[0.98] motion-reduce:transform-none sm:w-44 sm:gap-2.5"
     >
       {icon}
       <span className="text-left leading-tight">
-        <span className="block text-[10px] font-medium uppercase tracking-wide text-gray-300">
+        <span className="block whitespace-nowrap text-[9px] font-medium uppercase tracking-wide text-gray-300 sm:text-[10px]">
           {topLine}
         </span>
-        <span className="block text-base font-semibold">{bottomLine}</span>
+        <span className="block whitespace-nowrap text-sm font-semibold sm:text-base">
+          {bottomLine}
+        </span>
       </span>
     </a>
   );
@@ -52,7 +54,9 @@ function Badge({ href, platform, topLine, bottomLine, icon }: BadgeProps) {
 
 export default function StoreBadges({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex flex-wrap items-center gap-3 ${className}`}>
+    <div
+      className={`grid grid-cols-2 items-center gap-3 sm:flex sm:flex-wrap ${className}`}
+    >
       <Badge
         href={APP_STORE_URL}
         platform="ios"

@@ -7,7 +7,7 @@ import { APP_STORE_URL, PLAY_STORE_URL, SITE_URL } from "@/lib/constants";
 
 const FEATURE_STORIES = [
   {
-    eyebrow: "Daily dose logging",
+    eyebrow: "One tap a day",
     title: "Daily dose logging",
     description:
       "Check in each dose from the home screen and keep a clear record of what you actually took.",
@@ -22,7 +22,7 @@ const FEATURE_STORIES = [
     imagePosition: "center top",
   },
   {
-    eyebrow: "Smart reminders",
+    eyebrow: "Never miss a dose",
     title: "Smart reminders",
     description:
       "IsoLog keeps your dose time visible and sends a nudge before a busy day turns into a missed day.",
@@ -37,7 +37,7 @@ const FEATURE_STORIES = [
     imagePosition: "center top",
   },
   {
-    eyebrow: "Cumulative dose tracking",
+    eyebrow: "See your progress",
     title: "Cumulative dose tracking",
     description:
       "Watch your total intake add up over time, with progress toward your treatment goal in one place.",
@@ -167,8 +167,8 @@ function FeatureCard({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="h-full rounded-2xl border border-orange-100 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
-      <div className="mb-4 flex size-13 items-center justify-center rounded-xl bg-brand-tint text-brand">
+    <div className="h-full rounded-2xl border border-orange-100 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-md">
+      <div className="mb-4 flex size-13 items-center justify-center rounded-xl bg-brand-tint text-brand ring-1 ring-brand/10">
         {icon}
       </div>
       <h3 className="mb-2 text-lg font-semibold text-gray-900">{title}</h3>
@@ -207,11 +207,11 @@ function FeatureStory({
     <Reveal>
       <div
         className={`grid items-center gap-8 border-orange-100 lg:grid-cols-2 lg:gap-14 ${
-          index === 0 ? "" : "border-t pt-12 lg:pt-16"
+          index === 0 ? "" : "border-t pt-16 lg:pt-24"
         }`}
       >
         <div className={reversed ? "lg:order-2" : ""}>
-          <div className="overflow-hidden rounded-lg border border-orange-100 bg-white shadow-sm">
+          <div className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-md shadow-brand/5">
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src={story.imageSrc}
@@ -263,7 +263,7 @@ export default function Home() {
             alt=""
             fill
             priority
-            sizes="100vw"
+            sizes="(min-width: 1280px) 100vw, 1px"
             quality={90}
             className="hidden object-contain object-right-bottom xl:block xl:[mask-composite:intersect] xl:[mask-image:linear-gradient(to_right,transparent,black_200px),linear-gradient(to_bottom,transparent,black_140px)]"
           />
@@ -272,7 +272,7 @@ export default function Home() {
               <p className="mb-4 inline-block rounded-full bg-brand-tint px-4 py-1.5 text-sm font-semibold text-brand-dark ring-1 ring-brand/20">
                 For isotretinoin & Accutane users
               </p>
-              <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl">
+              <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
                 Stay on track with your{" "}
                 <span className="text-brand">isotretinoin</span> journey
               </h1>
@@ -301,7 +301,7 @@ export default function Home() {
         {/* Who it's for */}
         <section className="mx-auto max-w-3xl px-5 py-16 text-center lg:py-20">
           <Reveal>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Made for people on isotretinoin
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
@@ -325,8 +325,16 @@ export default function Home() {
 
         {/* Core features */}
         <section className="bg-brand-tint/60">
-          <div className="mx-auto max-w-6xl space-y-12 px-5 py-16 lg:space-y-16 lg:py-20">
-            <div className="space-y-12 lg:space-y-16">
+          <div className="mx-auto max-w-6xl space-y-16 px-5 py-16 lg:space-y-24 lg:py-20">
+            <Reveal>
+              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Everything your course needs
+              </h2>
+              <p className="mt-3 text-center text-lg text-gray-600">
+                Three things, done well: log it, remember it, see it add up.
+              </p>
+            </Reveal>
+            <div className="space-y-16 lg:space-y-24">
               {FEATURE_STORIES.map((story, index) => (
                 <FeatureStory key={story.title} story={story} index={index} />
               ))}
@@ -337,14 +345,14 @@ export default function Home() {
         {/* More features */}
         <section className="mx-auto max-w-6xl px-5 py-16 lg:py-20">
           <Reveal>
-            <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               More than a pill tracker
             </h2>
             <p className="mt-3 text-center text-lg text-gray-600">
               Everything around your course, covered too.
             </p>
           </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
             {MORE_FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={i * 120}>
                 <FeatureCard {...f} />
@@ -357,11 +365,11 @@ export default function Home() {
         <section className="bg-brand-tint/60">
           <div className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
             <Reveal>
-              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Frequently asked questions
               </h2>
             </Reveal>
-            <div className="mt-10 space-y-4">
+            <div className="mt-12 space-y-4 lg:mt-16">
               {FAQ_ITEMS.map((item, i) => (
                 <Reveal key={item.question} delay={i * 120}>
                   <details className="group rounded-2xl border border-orange-100 bg-white px-6 py-5 shadow-sm open:shadow-md">
@@ -397,28 +405,31 @@ export default function Home() {
         {/* Final CTA */}
         <section id="download" className="px-5 py-16 lg:py-24">
           <Reveal className="mx-auto max-w-5xl">
-            <div className="relative overflow-hidden rounded-3xl text-center shadow-xl shadow-brand/10 ring-1 ring-orange-100">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand to-brand-dark text-center shadow-xl shadow-brand/25">
               <Image
                 src="/cta-bg.png"
                 alt=""
                 fill
                 sizes="(min-width: 1024px) 1024px, 100vw"
                 quality={90}
-                className="object-cover"
+                className="object-cover opacity-15 mix-blend-luminosity"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(130%_105%_at_50%_128%,rgba(255,107,53,0.8),rgba(255,128,76,0.32)_48%,transparent_76%)]"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_-20%,rgba(255,255,255,0.28),transparent_60%)]"
               />
               <div className="relative flex flex-col items-center gap-6 px-6 py-14 sm:px-12 lg:py-16">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
                   Start your streak today
                 </h2>
-                <p className="max-w-xl text-xl font-medium text-gray-700">
+                <p className="max-w-xl text-xl font-medium text-white/90">
                   IsoLog helps you stay on track with consistent medication for
                   healthier skin.
                 </p>
                 <StoreBadges className="justify-center" />
+                <p className="text-sm text-white/70">
+                  Free to download · iOS & Android
+                </p>
               </div>
             </div>
           </Reveal>
