@@ -3,40 +3,47 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StoreBadges from "@/components/StoreBadges";
 import Reveal from "@/components/Reveal";
+import { APP_STORE_URL, PLAY_STORE_URL, SITE_URL } from "@/lib/constants";
 
-const CORE_FEATURES = [
+const FEATURE_STORIES = [
   {
+    eyebrow: "Daily dose logging",
     title: "Daily dose logging",
     description:
-      "Check in each dose with one tap and build a complete history of your entire course.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
-        <path d="M10.5 20.5 3.5 13.5a4.95 4.95 0 1 1 7-7l7 7a4.95 4.95 0 1 1-7 7Z" />
-        <path d="m7 6.5 7 7" />
-      </svg>
-    ),
+      "Check in each dose from the home screen and keep a clear record of what you actually took.",
+    points: [
+      "Set your dose once, then log it with one tap.",
+      "See dose, schedule, reminder, and skin status together.",
+      "Build a clean history for a months-long course.",
+    ],
+    videoSrc: "/videos/dose-logging.mp4",
+    posterSrc: "/videos/dose-logging-poster.png",
   },
   {
+    eyebrow: "Smart reminders",
     title: "Smart reminders",
     description:
-      "Get notified at your dose time so a busy day never turns into a missed day.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
-        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
-      </svg>
-    ),
+      "IsoLog keeps your dose time visible and sends a nudge before a busy day turns into a missed day.",
+    points: [
+      "Choose a reminder time that matches your routine.",
+      "Keep alternate-day schedules easy to follow.",
+      "Use notifications as a quiet backup, not mental clutter.",
+    ],
+    videoSrc: "/videos/smart-reminders.mp4",
+    posterSrc: "/videos/smart-reminders-poster.png",
   },
   {
+    eyebrow: "Cumulative dose tracking",
     title: "Cumulative dose tracking",
     description:
-      "See your total intake add up and track progress toward your treatment goal.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7">
-        <path d="M3 3v16a2 2 0 0 0 2 2h16" />
-        <path d="m7 14 4-4 4 3 5-6" />
-      </svg>
-    ),
+      "Watch your total intake add up over time, with progress toward your treatment goal in one place.",
+    points: [
+      "Track total dosage, pills, and goal progress.",
+      "Review trends across longer treatment windows.",
+      "Understand where you are without digging through notes.",
+    ],
+    videoSrc: "/videos/dose-progress.mp4",
+    posterSrc: "/videos/dose-progress-poster.png",
   },
 ];
 
@@ -88,6 +95,62 @@ const AUDIENCE_CHIPS = [
   "One-tap daily check-ins",
 ];
 
+const FAQ_ITEMS = [
+  {
+    question: "What is a cumulative dose in isotretinoin treatment?",
+    answer:
+      "Your cumulative dose is the total amount of isotretinoin you take over your whole course, usually measured in milligrams. Dermatologists often set a target based on body weight, so keeping track of the running total matters. IsoLog adds up every dose you log automatically, so you always know where you stand — ask your dermatologist what target is right for you.",
+  },
+  {
+    question: "Can I drink alcohol while taking isotretinoin?",
+    answer:
+      "Isotretinoin is processed by the liver, and so is alcohol — that's why many dermatologists recommend limiting or avoiding drinking during treatment and monitor it with blood tests. Always follow your doctor's guidance. If you do drink, IsoLog lets you log drinking days and warns you when they fall close to a dose.",
+  },
+  {
+    question: "What should I do if I miss a dose of isotretinoin?",
+    answer:
+      "In general, don't take a double dose to catch up — take your next scheduled dose as usual, and ask your healthcare provider if you're unsure. The best fix is prevention: IsoLog's reminders and one-tap daily check-ins make missed doses much less likely.",
+  },
+];
+
+const STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      name: "IsoLog",
+      operatingSystem: "iOS, Android",
+      applicationCategory: "HealthApplication",
+      description:
+        "Free isotretinoin (Accutane) tracker. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary.",
+      url: SITE_URL,
+      installUrl: APP_STORE_URL,
+      sameAs: [APP_STORE_URL, PLAY_STORE_URL],
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "WebSite",
+      name: "IsoLog",
+      url: SITE_URL,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: FAQ_ITEMS.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
+  ],
+};
+
 function FeatureCard({
   title,
   description,
@@ -105,6 +168,81 @@ function FeatureCard({
       <h3 className="mb-2 text-lg font-semibold text-gray-900">{title}</h3>
       <p className="leading-relaxed text-gray-600">{description}</p>
     </div>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+      aria-hidden
+    >
+      <path d="m4.5 10.5 3.3 3.3 7.7-8.1" />
+    </svg>
+  );
+}
+
+function FeatureStory({
+  story,
+  index,
+}: {
+  story: (typeof FEATURE_STORIES)[number];
+  index: number;
+}) {
+  const reversed = index % 2 === 1;
+
+  return (
+    <Reveal>
+      <div
+        className={`grid items-center gap-8 border-orange-100 lg:grid-cols-2 lg:gap-14 ${
+          index === 0 ? "" : "border-t pt-12 lg:pt-16"
+        }`}
+      >
+        <div className={reversed ? "lg:order-2" : ""}>
+          <div className="overflow-hidden rounded-lg border border-orange-100 bg-white shadow-sm">
+            <video
+              className="aspect-[4/3] w-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={story.posterSrc}
+              aria-label={`${story.title} animation`}
+            >
+              <source src={story.videoSrc} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div className={reversed ? "lg:order-1" : ""}>
+          <p className="mb-3 text-sm font-bold uppercase tracking-wide text-brand-dark">
+            {story.eyebrow}
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            {story.title}
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-gray-600">
+            {story.description}
+          </p>
+          <ul className="mt-7 space-y-3">
+            {story.points.map((point) => (
+              <li key={point} className="flex gap-3 text-gray-700">
+                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-brand text-white">
+                  <CheckIcon />
+                </span>
+                <span className="leading-relaxed">{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Reveal>
   );
 }
 
@@ -182,20 +320,10 @@ export default function Home() {
 
         {/* Core features */}
         <section className="bg-brand-tint/60">
-          <div className="mx-auto max-w-6xl px-5 py-16 lg:py-20">
-            <Reveal>
-              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
-                Never miss a dose
-              </h2>
-              <p className="mt-3 text-center text-lg text-gray-600">
-                The essentials, done right.
-              </p>
-            </Reveal>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {CORE_FEATURES.map((f, i) => (
-                <Reveal key={f.title} delay={i * 120}>
-                  <FeatureCard {...f} />
-                </Reveal>
+          <div className="mx-auto max-w-6xl space-y-12 px-5 py-16 lg:space-y-16 lg:py-20">
+            <div className="space-y-12 lg:space-y-16">
+              {FEATURE_STORIES.map((story, index) => (
+                <FeatureStory key={story.title} story={story} index={index} />
               ))}
             </div>
           </div>
@@ -220,6 +348,47 @@ export default function Home() {
           </div>
         </section>
 
+        {/* FAQ */}
+        <section className="bg-brand-tint/60">
+          <div className="mx-auto max-w-3xl px-5 py-16 lg:py-20">
+            <Reveal>
+              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
+                Frequently asked questions
+              </h2>
+            </Reveal>
+            <div className="mt-10 space-y-4">
+              {FAQ_ITEMS.map((item, i) => (
+                <Reveal key={item.question} delay={i * 120}>
+                  <details className="group rounded-2xl border border-orange-100 bg-white px-6 py-5 shadow-sm open:shadow-md">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-semibold text-gray-900 [&::-webkit-details-marker]:hidden">
+                      {item.question}
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-5 w-5 shrink-0 text-brand transition-transform duration-300 group-open:rotate-180"
+                        aria-hidden
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </summary>
+                    <p className="mt-3 leading-relaxed text-gray-600">
+                      {item.answer}
+                    </p>
+                  </details>
+                </Reveal>
+              ))}
+            </div>
+            <p className="mt-6 text-center text-sm text-gray-500">
+              General information only — not medical advice. Always consult
+              your dermatologist.
+            </p>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section id="download" className="bg-brand-dark">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-16 text-center lg:py-20">
@@ -237,6 +406,10 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
+      />
     </>
   );
 }
