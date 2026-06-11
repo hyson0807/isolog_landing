@@ -1,0 +1,107 @@
+import type { Metadata } from "next";
+import LegalLayout from "@/components/LegalLayout";
+import { SUPPORT_EMAIL } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  alternates: { canonical: "/terms" },
+};
+
+export default function TermsPage() {
+  return (
+    <LegalLayout title="Terms of Service" lastUpdated="December 2024">
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By downloading, installing, or using IsoLog (&quot;the App&quot;), you
+        agree to be bound by these Terms of Service. If you do not agree to
+        these terms, please do not use the App.
+      </p>
+
+      <h2>2. Description of Service</h2>
+      <p>
+        IsoLog is a medication tracking application designed to help users
+        monitor their Isotretinoin treatment. The App allows you to:
+      </p>
+      <ul>
+        <li>Track daily medication intake</li>
+        <li>Record skin condition changes</li>
+        <li>Set medication reminders</li>
+        <li>View medication history on a calendar</li>
+      </ul>
+
+      <h2>3. Medical Disclaimer</h2>
+      <div className="mb-4 rounded-r-lg border-l-4 border-brand bg-brand-tint p-4">
+        <p className="!mb-0">
+          <strong>Important:</strong> IsoLog is NOT a medical device and does
+          NOT provide medical advice. The App is intended for informational and
+          tracking purposes only. Always consult with your healthcare provider
+          for medical advice, diagnosis, or treatment. Never disregard
+          professional medical advice or delay seeking it because of something
+          you have read or tracked in this App.
+        </p>
+      </div>
+
+      <h2>4. User Responsibilities</h2>
+      <p>By using the App, you agree to:</p>
+      <ul>
+        <li>Provide accurate information when tracking your medication</li>
+        <li>Not rely solely on the App for medical decisions</li>
+        <li>Keep your device secure to protect your data</li>
+        <li>Use the App in compliance with all applicable laws</li>
+      </ul>
+
+      <h2>5. Premium Features</h2>
+      <p>
+        Some features of the App require a one-time purchase. Premium features
+        include:
+      </p>
+      <ul>
+        <li>Medication reminders</li>
+        <li>Ad-free experience</li>
+      </ul>
+      <p>
+        All purchases are final and non-refundable, except as required by
+        applicable law or app store policies.
+      </p>
+
+      <h2>6. Intellectual Property</h2>
+      <p>
+        All content, features, and functionality of the App are owned by
+        IsoLog and are protected by international copyright, trademark, and
+        other intellectual property laws.
+      </p>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by law, IsoLog shall not be liable for
+        any indirect, incidental, special, consequential, or punitive damages
+        resulting from your use of or inability to use the App.
+      </p>
+
+      <h2>8. Changes to Terms</h2>
+      <p>
+        We reserve the right to modify these Terms of Service at any time. We
+        will notify users of any material changes by updating the &quot;Last
+        updated&quot; date. Your continued use of the App after such changes
+        constitutes acceptance of the new terms.
+      </p>
+
+      <h2>9. Termination</h2>
+      <p>
+        You may stop using the App at any time by uninstalling it from your
+        device. All locally stored data will be deleted when you uninstall the
+        App.
+      </p>
+
+      <h2>10. Contact Information</h2>
+      <p>
+        For any questions regarding these Terms of Service, please contact us
+        at:
+      </p>
+      <p>
+        <strong>Email:</strong>{" "}
+        <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+      </p>
+    </LegalLayout>
+  );
+}
