@@ -16,9 +16,13 @@ export const metadata: Metadata = {
     template: "%s | IsoLog",
   },
   description:
-    "Free isotretinoin (Accutane) tracker for iOS & Android. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary — all in one app.",
+    "Isotretinoin (Accutane) tracker for iOS & Android. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary — all in one app.",
   applicationName: "IsoLog",
   keywords: [
+    "isolog",
+    "accutane",
+    "isotretinoin",
+    "이소로그",
     "isotretinoin tracker",
     "accutane tracker",
     "accutane app",

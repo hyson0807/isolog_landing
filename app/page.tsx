@@ -122,7 +122,7 @@ const STRUCTURED_DATA = {
       operatingSystem: "iOS, Android",
       applicationCategory: "HealthApplication",
       description:
-        "Free isotretinoin (Accutane) tracker. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary.",
+        "Isotretinoin (Accutane) tracker. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary.",
       url: SITE_URL,
       installUrl: APP_STORE_URL,
       sameAs: [APP_STORE_URL, PLAY_STORE_URL],

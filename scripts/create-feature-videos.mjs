@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, rm } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
@@ -303,5 +303,4 @@ for (const [name, render] of videos) {
   }
 }
 
-await writeFile(path.join(OUT_DIR, "README.md"), "Generated IsoLog feature loop videos.\n");
 await rm(TMP_DIR, { recursive: true, force: true });
