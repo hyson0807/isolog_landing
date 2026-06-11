@@ -49,7 +49,7 @@ const FEATURE_STORIES = [
     imageSrc: "/features/dose-tracking.jpg",
     imageAlt:
       "IsoLog cumulative dose tracking screen with total dosage and treatment summary",
-    imagePosition: "center 10%",
+    imagePosition: "center 2%",
   },
 ];
 
