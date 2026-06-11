@@ -31,7 +31,7 @@ const FEATURE_STORIES = [
       "Keep alternate-day schedules easy to follow.",
       "Use notifications as a quiet backup, not mental clutter.",
     ],
-    imageSrc: "/features/smart-reminders.jpg",
+    imageSrc: "/features/reminder-sheet.jpg",
     imageAlt:
       "IsoLog reminder sheet set to send medication reminders at 10:00 PM",
     imagePosition: "center top",
