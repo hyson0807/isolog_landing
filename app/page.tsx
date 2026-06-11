@@ -392,20 +392,24 @@ export default function Home() {
         {/* Final CTA */}
         <section id="download" className="px-5 py-16 lg:py-24">
           <Reveal className="mx-auto max-w-5xl">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand via-brand to-brand-dark px-6 py-14 text-center shadow-xl shadow-brand/20 sm:px-12 lg:py-16">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -left-24 -top-32 size-80 rounded-full bg-white/10"
+            <div className="relative overflow-hidden rounded-3xl text-center shadow-xl shadow-brand/10 ring-1 ring-orange-100">
+              <Image
+                src="/cta-bg.png"
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 1024px, 100vw"
+                quality={90}
+                className="object-cover"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute -bottom-36 -right-20 size-96 rounded-full bg-white/[0.08]"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(130%_105%_at_50%_128%,rgba(255,107,53,0.8),rgba(255,128,76,0.32)_48%,transparent_76%)]"
               />
-              <div className="relative flex flex-col items-center gap-6">
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <div className="relative flex flex-col items-center gap-6 px-6 py-14 sm:px-12 lg:py-16">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Start your streak today
                 </h2>
-                <p className="max-w-xl text-xl font-medium text-white">
+                <p className="max-w-xl text-xl font-medium text-gray-700">
                   IsoLog helps you stay on track with consistent medication for
                   healthier skin.
                 </p>
