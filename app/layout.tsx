@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | IsoLog",
   },
   description:
-    "Isotretinoin (Accutane) tracker for iOS & Android. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary — all in one app.",
+    "Isotretinoin (Accutane) tracker for iOS & Android. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary, all in one app.",
   applicationName: "IsoLog",
   keywords: [
     "isolog",
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "IsoLog — Isotretinoin & Accutane Tracker App",
     description:
-      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings — built for people on isotretinoin.",
+      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings. Built for people on isotretinoin.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "IsoLog — Never miss a dose of your isotretinoin course" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "IsoLog — Isotretinoin & Accutane Tracker App",
     description:
-      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings — built for people on isotretinoin.",
+      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings. Built for people on isotretinoin.",
     images: ["/og.png"],
   },
 };

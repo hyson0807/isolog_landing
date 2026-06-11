@@ -16,8 +16,10 @@ const FEATURE_STORIES = [
       "See dose, schedule, reminder, and skin status together.",
       "Build a clean history for a months-long course.",
     ],
-    videoSrc: "/videos/dose-logging.mp4",
-    posterSrc: "/videos/dose-logging-poster.png",
+    imageSrc: "/features/daily-dose-logging.png",
+    imageAlt:
+      "IsoLog calendar screen showing the June 2026 every-other-day dose schedule",
+    imagePosition: "center top",
   },
   {
     eyebrow: "Smart reminders",
@@ -29,8 +31,10 @@ const FEATURE_STORIES = [
       "Keep alternate-day schedules easy to follow.",
       "Use notifications as a quiet backup, not mental clutter.",
     ],
-    videoSrc: "/videos/smart-reminders.mp4",
-    posterSrc: "/videos/smart-reminders-poster.png",
+    imageSrc: "/features/smart-reminders.png",
+    imageAlt:
+      "IsoLog reminder sheet set to send medication reminders at 10:00 PM",
+    imagePosition: "center 58%",
   },
   {
     eyebrow: "Cumulative dose tracking",
@@ -42,8 +46,10 @@ const FEATURE_STORIES = [
       "Review trends across longer treatment windows.",
       "Understand where you are without digging through notes.",
     ],
-    videoSrc: "/videos/dose-progress.mp4",
-    posterSrc: "/videos/dose-progress-poster.png",
+    imageSrc: "/features/dose-tracking.png",
+    imageAlt:
+      "IsoLog cumulative dose tracking screen with total dosage and treatment summary",
+    imagePosition: "center 39%",
   },
 ];
 
@@ -99,17 +105,17 @@ const FAQ_ITEMS = [
   {
     question: "What is a cumulative dose in isotretinoin treatment?",
     answer:
-      "Your cumulative dose is the total amount of isotretinoin you take over your whole course, usually measured in milligrams. Dermatologists often set a target based on body weight, so keeping track of the running total matters. IsoLog adds up every dose you log automatically, so you always know where you stand — ask your dermatologist what target is right for you.",
+      "Your cumulative dose is the total amount of isotretinoin you take over your whole course, usually measured in milligrams. Dermatologists often set a target based on body weight, so keeping track of the running total matters. IsoLog adds up every dose you log automatically, so you always know where you stand. Ask your dermatologist what target is right for you.",
   },
   {
     question: "Can I drink alcohol while taking isotretinoin?",
     answer:
-      "Isotretinoin is processed by the liver, and so is alcohol — that's why many dermatologists recommend limiting or avoiding drinking during treatment and monitor it with blood tests. Always follow your doctor's guidance. If you do drink, IsoLog lets you log drinking days and warns you when they fall close to a dose.",
+      "Isotretinoin is processed by the liver, and so is alcohol. That's why many dermatologists recommend limiting or avoiding drinking during treatment and monitor it with blood tests. Always follow your doctor's guidance. If you do drink, IsoLog lets you log drinking days and warns you when they fall close to a dose.",
   },
   {
     question: "What should I do if I miss a dose of isotretinoin?",
     answer:
-      "In general, don't take a double dose to catch up — take your next scheduled dose as usual, and ask your healthcare provider if you're unsure. The best fix is prevention: IsoLog's reminders and one-tap daily check-ins make missed doses much less likely.",
+      "In general, don't take a double dose to catch up. Take your next scheduled dose as usual, and ask your healthcare provider if you're unsure. The best fix is prevention: IsoLog's reminders and one-tap daily check-ins make missed doses much less likely.",
   },
 ];
 
@@ -206,18 +212,17 @@ function FeatureStory({
       >
         <div className={reversed ? "lg:order-2" : ""}>
           <div className="overflow-hidden rounded-lg border border-orange-100 bg-white shadow-sm">
-            <video
-              className="aspect-[4/3] w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster={story.posterSrc}
-              aria-label={`${story.title} animation`}
-            >
-              <source src={story.videoSrc} type="video/mp4" />
-            </video>
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src={story.imageSrc}
+                alt={story.imageAlt}
+                fill
+                sizes="(min-width: 1024px) 528px, calc(100vw - 40px)"
+                quality={90}
+                className="object-cover"
+                style={{ objectPosition: story.imagePosition }}
+              />
+            </div>
           </div>
         </div>
         <div className={reversed ? "lg:order-1" : ""}>
@@ -272,9 +277,9 @@ export default function Home() {
                 <span className="text-brand">isotretinoin</span> journey
               </h1>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-gray-600 xl:mx-0">
-                Log every dose, get reminded before you forget, and watch your
-                progress add up. IsoLog keeps your whole course in one place —
-                so consistency takes care of itself.
+                Log every dose and get reminded before you forget. IsoLog
+                keeps your whole course in one place, so your progress adds up
+                and consistency takes care of itself.
               </p>
               <StoreBadges className="mt-8 justify-center xl:justify-start" />
               <p className="mt-4 text-sm text-gray-500">
@@ -301,7 +306,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
               An isotretinoin (Accutane) course only works if you take it
-              consistently — for months. IsoLog was built for exactly that: a
+              consistently, for months. IsoLog was built for exactly that: a
               simple daily check-in, reminders that have your back, and a clear
               picture of how far you&apos;ve come.
             </p>
@@ -383,7 +388,7 @@ export default function Home() {
               ))}
             </div>
             <p className="mt-6 text-center text-sm text-gray-500">
-              General information only — not medical advice. Always consult
+              General information only, not medical advice. Always consult
               your dermatologist.
             </p>
           </div>
