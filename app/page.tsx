@@ -16,7 +16,7 @@ const FEATURE_STORIES = [
       "See dose, schedule, reminder, and skin status together.",
       "Build a clean history for a months-long course.",
     ],
-    imageSrc: "/features/daily-dose-logging.png",
+    imageSrc: "/features/daily-dose-logging.jpg",
     imageAlt:
       "IsoLog calendar screen showing the June 2026 every-other-day dose schedule",
     imagePosition: "center top",
@@ -31,10 +31,10 @@ const FEATURE_STORIES = [
       "Keep alternate-day schedules easy to follow.",
       "Use notifications as a quiet backup, not mental clutter.",
     ],
-    imageSrc: "/features/smart-reminders.png",
+    imageSrc: "/features/smart-reminders.jpg",
     imageAlt:
       "IsoLog reminder sheet set to send medication reminders at 10:00 PM",
-    imagePosition: "center 58%",
+    imagePosition: "center top",
   },
   {
     eyebrow: "Cumulative dose tracking",
@@ -46,10 +46,10 @@ const FEATURE_STORIES = [
       "Review trends across longer treatment windows.",
       "Understand where you are without digging through notes.",
     ],
-    imageSrc: "/features/dose-tracking.png",
+    imageSrc: "/features/dose-tracking.jpg",
     imageAlt:
       "IsoLog cumulative dose tracking screen with total dosage and treatment summary",
-    imagePosition: "center 39%",
+    imagePosition: "center 10%",
   },
 ];
 
