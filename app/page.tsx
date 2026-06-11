@@ -103,6 +103,17 @@ const AUDIENCE_CHIPS = [
 
 const FAQ_ITEMS = [
   {
+    question:
+      "Does IsoLog work with Accutane, Roaccutane, Isotinon, and other brands?",
+    answer:
+      "Yes. Accutane, Roaccutane, Isotinon, Claravis, and Absorica are all brand names for the same active ingredient: isotretinoin. IsoLog tracks any isotretinoin course regardless of the brand or generic you take — just set your dose per pill and start logging.",
+  },
+  {
+    question: "Why is isotretinoin prescribed for acne and oily skin?",
+    answer:
+      "Isotretinoin shrinks the skin's sebaceous glands and reduces sebum (oil) production, which is why dermatologists prescribe it for severe or stubborn acne that hasn't responded to other acne medication. Less oil means fewer clogged pores and breakouts. IsoLog's skin diary helps you see how dryness and oiliness change over your course.",
+  },
+  {
     question: "What is a cumulative dose in isotretinoin treatment?",
     answer:
       "Your cumulative dose is the total amount of isotretinoin you take over your whole course, usually measured in milligrams. Dermatologists often set a target based on body weight, so keeping track of the running total matters. IsoLog adds up every dose you log automatically, so you always know where you stand. Ask your dermatologist what target is right for you.",
@@ -128,7 +139,7 @@ const STRUCTURED_DATA = {
       operatingSystem: "iOS, Android",
       applicationCategory: "HealthApplication",
       description:
-        "Isotretinoin (Accutane) tracker. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary.",
+        "Isotretinoin (Accutane) tracker for acne treatment. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary.",
       url: SITE_URL,
       installUrl: APP_STORE_URL,
       sameAs: [APP_STORE_URL, PLAY_STORE_URL],
@@ -305,7 +316,8 @@ export default function Home() {
               Made for people on isotretinoin
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              An isotretinoin (Accutane) course only works if you take it
+              An isotretinoin (Accutane) course is one of the strongest acne
+              treatments there is — and it only works if you take it
               consistently, for months. IsoLog was built for exactly that: a
               simple daily check-in, reminders that have your back, and a clear
               picture of how far you&apos;ve come.

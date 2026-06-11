@@ -12,22 +12,29 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "IsoLog — Isotretinoin & Accutane Tracker App",
+    default: "IsoLog — Isotretinoin & Accutane Tracker for Acne Treatment",
     template: "%s | IsoLog",
   },
   description:
-    "Isotretinoin (Accutane) tracker for iOS & Android. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary, all in one app.",
+    "Isotretinoin (Accutane) tracker for acne treatment. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary — on iOS & Android.",
   applicationName: "IsoLog",
   keywords: [
     "isolog",
     "accutane",
     "isotretinoin",
+    "roaccutane",
+    "isotinon",
     "이소로그",
     "isotretinoin tracker",
     "accutane tracker",
     "accutane app",
     "isotretinoin app",
     "isotretinoin reminder",
+    "acne medication tracker",
+    "acne treatment app",
+    "acne pill reminder",
+    "sebum control",
+    "oily skin treatment",
     "cumulative dose tracker",
     "accutane log",
   ],
@@ -42,16 +49,16 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "IsoLog",
     locale: "en_US",
-    title: "IsoLog — Isotretinoin & Accutane Tracker App",
+    title: "IsoLog — Isotretinoin & Accutane Tracker for Acne Treatment",
     description:
-      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings. Built for people on isotretinoin.",
+      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings. Built for people taking isotretinoin for acne.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "IsoLog — Never miss a dose of your isotretinoin course" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IsoLog — Isotretinoin & Accutane Tracker App",
+    title: "IsoLog — Isotretinoin & Accutane Tracker for Acne Treatment",
     description:
-      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings. Built for people on isotretinoin.",
+      "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings. Built for people taking isotretinoin for acne.",
     images: ["/og.png"],
   },
 };
