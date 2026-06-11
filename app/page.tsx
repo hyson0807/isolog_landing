@@ -221,7 +221,7 @@ function FeatureStory({
           index === 0 ? "" : "border-t pt-16 lg:pt-24"
         }`}
       >
-        <div className={reversed ? "lg:order-2" : ""}>
+        <div className={`max-lg:order-2 ${reversed ? "lg:order-2" : ""}`}>
           <div className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-md shadow-brand/5">
             <div className="relative aspect-[4/3] w-full">
               <Image
@@ -236,17 +236,19 @@ function FeatureStory({
             </div>
           </div>
         </div>
-        <div className={reversed ? "lg:order-1" : ""}>
-          <p className="mb-3 text-sm font-bold uppercase tracking-wide text-brand-dark">
-            {story.eyebrow}
-          </p>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {story.title}
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-gray-600">
-            {story.description}
-          </p>
-          <ul className="mt-7 space-y-3">
+        <div className={`contents lg:block ${reversed ? "lg:order-1" : ""}`}>
+          <div className="max-lg:order-1">
+            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-brand-dark">
+              {story.eyebrow}
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              {story.title}
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-gray-600">
+              {story.description}
+            </p>
+          </div>
+          <ul className="mt-7 space-y-3 max-lg:order-3 max-lg:mt-0">
             {story.points.map((point) => (
               <li key={point} className="flex gap-3 text-gray-700">
                 <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-brand text-white">
@@ -336,15 +338,7 @@ export default function Home() {
 
         {/* Core features */}
         <section className="bg-brand-tint/60">
-          <div className="mx-auto max-w-6xl space-y-16 px-5 py-16 lg:space-y-24 lg:py-20">
-            <Reveal>
-              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Everything your course needs
-              </h2>
-              <p className="mt-3 text-center text-lg text-gray-600">
-                Log it. Remember it. See it add up.
-              </p>
-            </Reveal>
+          <div className="mx-auto max-w-6xl px-5 py-16 lg:py-20">
             <div className="space-y-16 lg:space-y-24">
               {FEATURE_STORIES.map((story, index) => (
                 <FeatureStory key={story.title} story={story} index={index} />
