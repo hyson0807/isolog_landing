@@ -288,9 +288,8 @@ export default function Home() {
                 <span className="text-brand">isotretinoin</span> journey
               </h1>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-gray-600 xl:mx-0">
-                Log every dose and get reminded before you forget. IsoLog
-                keeps your whole course in one place, so your progress adds up
-                and consistency takes care of itself.
+                Log every dose, get reminded before you forget, and watch
+                your progress add up.
               </p>
               <StoreBadges className="mt-8 justify-center xl:justify-start" />
               <p className="mt-4 text-sm text-gray-500">
@@ -315,18 +314,18 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Made for people on isotretinoin
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              An isotretinoin (Accutane) course is one of the strongest acne
-              treatments there is — and it only works if you take it
-              consistently, for months. IsoLog was built for exactly that: a
-              simple daily check-in, reminders that have your back, and a clear
-              picture of how far you&apos;ve come.
+            <p className="mt-4 text-lg leading-relaxed text-gray-600 max-sm:text-balance">
+              Isotretinoin (Accutane) is a powerful acne treatment — if you
+              take it consistently, for months.{" "}
+              <br className="sm:hidden" />
+              IsoLog makes that easy: one-tap check-ins, reminders, and a
+              clear view of your progress.
             </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
+            <div className="mt-7 flex flex-wrap justify-center gap-2 sm:gap-3">
               {AUDIENCE_CHIPS.map((chip) => (
                 <span
                   key={chip}
-                  className="rounded-full bg-brand-tint px-4 py-2 text-sm font-semibold text-brand-dark ring-1 ring-brand/20"
+                  className="whitespace-nowrap rounded-full bg-brand-tint px-3 py-1.5 text-xs font-semibold text-brand-dark ring-1 ring-brand/20 sm:px-4 sm:py-2 sm:text-sm"
                 >
                   {chip}
                 </span>
@@ -343,7 +342,7 @@ export default function Home() {
                 Everything your course needs
               </h2>
               <p className="mt-3 text-center text-lg text-gray-600">
-                Three things, done well: log it, remember it, see it add up.
+                Log it. Remember it. See it add up.
               </p>
             </Reveal>
             <div className="space-y-16 lg:space-y-24">
