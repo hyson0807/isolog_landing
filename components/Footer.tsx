@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { APP_STORE_URL, SUPPORT_EMAIL } from "@/lib/constants";
+import { SUPPORT_EMAIL } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -19,11 +19,8 @@ export default function Footer() {
           </span>
         </div>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-gray-600">
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="transition hover:text-brand">
-            Support
-          </a>
           <a href={`mailto:${SUPPORT_EMAIL}`} className="transition hover:text-brand">
-            Contact
+            Support
           </a>
           <Link href="/privacy" className="transition hover:text-brand">
             Privacy Policy
