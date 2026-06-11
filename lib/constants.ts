@@ -8,4 +8,4 @@ export const SUPPORT_EMAIL = "contact@hyson.kr";
 
 // Reddit Ads pixel. Leave empty to disable tracking entirely.
 // Get your Pixel ID from Reddit Ads Manager → Events Manager, then paste it here (e.g. "a2_xxxxxxxx").
-export const REDDIT_PIXEL_ID = "";
+export const REDDIT_PIXEL_ID = "a2_j5sessohjqiw";
