@@ -390,19 +390,29 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section id="download" className="bg-brand-dark">
-          <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 py-16 text-center lg:py-20">
-            <Reveal className="flex flex-col items-center gap-6">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Start your streak today
-              </h2>
-              <p className="max-w-xl text-xl font-medium text-white">
-                IsoLog helps you stay on track with consistent medication for
-                healthier skin.
-              </p>
-              <StoreBadges className="justify-center" />
-            </Reveal>
-          </div>
+        <section id="download" className="px-5 py-16 lg:py-24">
+          <Reveal className="mx-auto max-w-5xl">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand via-brand to-brand-dark px-6 py-14 text-center shadow-xl shadow-brand/20 sm:px-12 lg:py-16">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -left-24 -top-32 size-80 rounded-full bg-white/10"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -bottom-36 -right-20 size-96 rounded-full bg-white/[0.08]"
+              />
+              <div className="relative flex flex-col items-center gap-6">
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  Start your streak today
+                </h2>
+                <p className="max-w-xl text-xl font-medium text-white">
+                  IsoLog helps you stay on track with consistent medication for
+                  healthier skin.
+                </p>
+                <StoreBadges className="justify-center" />
+              </div>
+            </div>
+          </Reveal>
         </section>
       </main>
       <Footer />
