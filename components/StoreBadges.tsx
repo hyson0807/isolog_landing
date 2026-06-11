@@ -37,7 +37,7 @@ function Badge({ href, platform, topLine, bottomLine, icon }: BadgeProps) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackDownloadClick(platform)}
-      className="flex h-14 w-44 items-center justify-center gap-2.5 rounded-xl bg-gray-900 text-white shadow-sm transition hover:bg-black hover:shadow-md"
+      className="flex h-14 w-44 items-center justify-center gap-2.5 rounded-xl bg-gray-900 text-white shadow-sm transition duration-200 hover:scale-[1.04] hover:bg-black hover:shadow-lg active:scale-[0.98] motion-reduce:transform-none"
     >
       {icon}
       <span className="text-left leading-tight">

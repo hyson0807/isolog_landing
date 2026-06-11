@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     title: "IsoLog — Isotretinoin & Accutane Tracker",
     description:
       "Dose tracking, smart reminders, skin diary, and alcohol warnings — built for people on isotretinoin.",
-    images: [{ url: "/hero.png", width: 1672, height: 941, alt: "IsoLog app" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "IsoLog — Never miss a dose of your isotretinoin course" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "IsoLog — Isotretinoin & Accutane Tracker",
     description:
       "Dose tracking, smart reminders, skin diary, and alcohol warnings — built for people on isotretinoin.",
-    images: ["/hero.png"],
+    images: ["/og.png"],
   },
 };
 

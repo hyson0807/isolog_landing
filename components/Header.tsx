@@ -19,7 +19,7 @@ export default function Header() {
         </Link>
         <Link
           href="/#download"
-          className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
+          className="rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition duration-200 hover:scale-105 hover:bg-brand-dark active:scale-95 motion-reduce:transform-none"
         >
           Download
         </Link>
