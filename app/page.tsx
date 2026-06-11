@@ -116,7 +116,7 @@ export default function Home() {
         {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-b from-white via-brand-tint to-orange-100/70">
           <Image
-            src="/hero-wide.png"
+            src="/hero-ultrawide.png"
             alt=""
             fill
             priority
