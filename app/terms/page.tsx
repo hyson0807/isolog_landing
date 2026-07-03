@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <LegalLayout title="Terms of Service" lastUpdated="December 2024">
+    <LegalLayout title="Terms of Service" lastUpdated="July 2026">
       <h2>1. Acceptance of Terms</h2>
       <p>
         By downloading, installing, or using IsoLog (&quot;the App&quot;), you
@@ -27,6 +27,9 @@ export default function TermsPage() {
         <li>Record skin condition changes</li>
         <li>Set medication reminders</li>
         <li>View medication history on a calendar</li>
+        <li>
+          Back up and sync your records across devices (IsoLog Pro, signed in)
+        </li>
       </ul>
 
       <h2>3. Medical Disclaimer</h2>
@@ -46,17 +49,31 @@ export default function TermsPage() {
       <ul>
         <li>Provide accurate information when tracking your medication</li>
         <li>Not rely solely on the App for medical decisions</li>
-        <li>Keep your device secure to protect your data</li>
+        <li>
+          Keep your device and sign-in credentials secure to protect your data
+        </li>
         <li>Use the App in compliance with all applicable laws</li>
       </ul>
 
-      <h2>5. Premium Features</h2>
+      <h2>5. Accounts &amp; Sync</h2>
       <p>
-        Some features of the App require a one-time purchase. Premium features
-        include:
+        You can create an account by signing in with Google or Apple. Account
+        sign-in and cross-device sync are exclusive to IsoLog Pro subscribers.
+        While signed in, your records are backed up to servers managed by
+        IsoLog and can be restored on other devices. You can delete your
+        account at any time in <strong>Settings &gt; Account</strong> inside
+        the App, which permanently deletes all data stored on our servers.
+      </p>
+
+      <h2>6. Premium Features</h2>
+      <p>
+        Some features of the App require a one-time purchase (IsoLog Pro).
+        Premium features include:
       </p>
       <ul>
-        <li>Medication reminders</li>
+        <li>Tracking tab with dosage and skin trend charts</li>
+        <li>Home dosage summary</li>
+        <li>Backup and cross-device sync</li>
         <li>Ad-free experience</li>
       </ul>
       <p>
@@ -64,21 +81,21 @@ export default function TermsPage() {
         applicable law or app store policies.
       </p>
 
-      <h2>6. Intellectual Property</h2>
+      <h2>7. Intellectual Property</h2>
       <p>
         All content, features, and functionality of the App are owned by
         IsoLog and are protected by international copyright, trademark, and
         other intellectual property laws.
       </p>
 
-      <h2>7. Limitation of Liability</h2>
+      <h2>8. Limitation of Liability</h2>
       <p>
         To the fullest extent permitted by law, IsoLog shall not be liable for
         any indirect, incidental, special, consequential, or punitive damages
         resulting from your use of or inability to use the App.
       </p>
 
-      <h2>8. Changes to Terms</h2>
+      <h2>9. Changes to Terms</h2>
       <p>
         We reserve the right to modify these Terms of Service at any time. We
         will notify users of any material changes by updating the &quot;Last
@@ -86,14 +103,16 @@ export default function TermsPage() {
         constitutes acceptance of the new terms.
       </p>
 
-      <h2>9. Termination</h2>
+      <h2>10. Termination</h2>
       <p>
         You may stop using the App at any time by uninstalling it from your
-        device. All locally stored data will be deleted when you uninstall the
-        App.
+        device. Locally stored data is deleted when you uninstall the App. If
+        you used sync while signed in, data backed up on our servers is
+        retained until you delete your account in{" "}
+        <strong>Settings &gt; Account &gt; Delete Account</strong>.
       </p>
 
-      <h2>10. Contact Information</h2>
+      <h2>11. Contact Information</h2>
       <p>
         For any questions regarding these Terms of Service, please contact us
         at:
