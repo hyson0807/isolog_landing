@@ -13,11 +13,23 @@ function AppleIcon() {
 
 function PlayIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden>
-      <path d="M3.61 1.81c-.36.38-.57.97-.57 1.73v16.92c0 .76.21 1.35.57 1.73l.09.08 9.48-9.48v-.22L3.7 1.72l-.09.09z" />
-      <path d="M16.34 15.95l-3.16-3.16v-.22l3.16-3.16.07.04 3.74 2.13c1.07.6 1.07 1.6 0 2.21l-3.74 2.12-.07.04z" opacity=".9" />
-      <path d="M16.41 15.91l-3.23-3.23-9.57 9.57c.35.37 .93.42 1.59.05l11.21-6.39z" opacity=".7" />
-      <path d="M16.41 8.45L5.2 2.07c-.66-.38-1.24-.33-1.59.04l9.57 9.57 3.23-3.23z" opacity=".8" />
+    <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden>
+      <path
+        fill="#4285F4"
+        d="M3.61 1.81c-.36.38-.57.97-.57 1.73v16.92c0 .76.21 1.35.57 1.73l.09.08 9.48-9.48v-.22L3.7 1.72l-.09.09z"
+      />
+      <path
+        fill="#FBBC04"
+        d="M16.34 15.95l-3.16-3.16v-.22l3.16-3.16.07.04 3.74 2.13c1.07.6 1.07 1.6 0 2.21l-3.74 2.12-.07.04z"
+      />
+      <path
+        fill="#EA4335"
+        d="M16.41 15.91l-3.23-3.23-9.57 9.57c.35.37.93.42 1.59.05l11.21-6.39z"
+      />
+      <path
+        fill="#34A853"
+        d="M16.41 8.45 5.2 2.07c-.66-.38-1.24-.33-1.59.04l9.57 9.57 3.23-3.23z"
+      />
     </svg>
   );
 }
@@ -37,7 +49,11 @@ function Badge({ href, platform, topLine, bottomLine, icon }: BadgeProps) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackDownloadClick(platform)}
-      className="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gray-900 px-2 text-white shadow-sm transition duration-200 hover:scale-[1.04] hover:bg-black hover:shadow-lg active:scale-[0.98] motion-reduce:transform-none sm:w-44 sm:gap-2.5"
+      className={`flex h-14 w-full items-center justify-center gap-2 rounded-xl px-2 text-white shadow-sm transition duration-200 hover:scale-[1.04] hover:shadow-lg active:scale-[0.98] motion-reduce:transform-none sm:w-44 sm:gap-2.5 ${
+        platform === "android"
+          ? "bg-black hover:bg-[#202124]"
+          : "bg-gray-900 hover:bg-black"
+      }`}
     >
       {icon}
       <span className="text-left leading-tight">

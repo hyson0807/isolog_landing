@@ -7,7 +7,6 @@ import { APP_STORE_URL, PLAY_STORE_URL, SITE_URL } from "@/lib/constants";
 
 const FEATURE_STORIES = [
   {
-    eyebrow: "One tap a day",
     title: "Daily dose logging",
     description:
       "Check in each dose from the home screen and keep a clear record of what you actually took.",
@@ -22,7 +21,6 @@ const FEATURE_STORIES = [
     imagePosition: "center top",
   },
   {
-    eyebrow: "Never miss a dose",
     title: "Smart reminders",
     description:
       "IsoLog keeps your dose time visible and sends a nudge before a busy day turns into a missed day.",
@@ -37,7 +35,6 @@ const FEATURE_STORIES = [
     imagePosition: "center top",
   },
   {
-    eyebrow: "See your progress",
     title: "Cumulative dose tracking",
     description:
       "Watch your total intake add up over time, with progress toward your treatment goal in one place.",
@@ -93,12 +90,6 @@ const MORE_FEATURES = [
       </svg>
     ),
   },
-];
-
-const AUDIENCE_CHIPS = [
-  "Months-long courses",
-  "Cumulative dose goals",
-  "One-tap daily check-ins",
 ];
 
 const FAQ_ITEMS = [
@@ -238,9 +229,6 @@ function FeatureStory({
         </div>
         <div className={`contents lg:block ${reversed ? "lg:order-1" : ""}`}>
           <div className="max-lg:order-1">
-            <p className="mb-3 text-sm font-bold uppercase tracking-wide text-brand-dark">
-              {story.eyebrow}
-            </p>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {story.title}
             </h2>
@@ -282,21 +270,14 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-6xl px-5 pt-14 xl:py-24">
             <div className="text-center xl:max-w-xl xl:text-left">
-              <p className="mb-4 inline-block rounded-full bg-brand-tint px-4 py-1.5 text-sm font-semibold text-brand-dark ring-1 ring-brand/20">
-                For isotretinoin & Accutane users
-              </p>
               <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                Stay on track with your{" "}
-                <span className="text-brand">isotretinoin</span> journey
+                Stay on track with your isotretinoin journey
               </h1>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-gray-600 xl:mx-0">
                 Log every dose, get reminded before you forget, and watch
                 your progress add up.
               </p>
               <StoreBadges className="mt-8 justify-center xl:justify-start" />
-              <p className="mt-4 text-sm text-gray-500">
-                Free to download · iOS & Android
-              </p>
             </div>
             <Image
               src="/hero.png"
@@ -323,16 +304,6 @@ export default function Home() {
               IsoLog makes that easy: one-tap check-ins, reminders, and a
               clear view of your progress.
             </p>
-            <div className="mt-7 flex flex-wrap justify-center gap-2 sm:gap-3">
-              {AUDIENCE_CHIPS.map((chip) => (
-                <span
-                  key={chip}
-                  className="whitespace-nowrap rounded-full bg-brand-tint px-3 py-1.5 text-xs font-semibold text-brand-dark ring-1 ring-brand/20 sm:px-4 sm:py-2 sm:text-sm"
-                >
-                  {chip}
-                </span>
-              ))}
-            </div>
           </Reveal>
         </section>
 
@@ -353,9 +324,6 @@ export default function Home() {
             <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               More than a pill tracker
             </h2>
-            <p className="mt-3 text-center text-lg text-gray-600">
-              Everything around your course, covered too.
-            </p>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
             {MORE_FEATURES.map((f, i) => (
@@ -408,35 +376,38 @@ export default function Home() {
         </section>
 
         {/* Final CTA */}
-        <section id="download" className="px-5 py-16 lg:py-24">
-          <Reveal className="mx-auto max-w-5xl">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand to-brand-dark text-center shadow-xl shadow-brand/25">
-              <Image
-                src="/cta-bg.png"
-                alt=""
-                fill
-                sizes="(min-width: 1024px) 1024px, 100vw"
-                quality={90}
-                className="object-cover opacity-15 mix-blend-luminosity"
-              />
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_-20%,rgba(255,255,255,0.28),transparent_60%)]"
-              />
-              <div className="relative flex flex-col items-center gap-6 px-6 py-14 sm:px-12 lg:py-16">
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
-                  Start your streak today
-                </h2>
-                <p className="max-w-xl text-xl font-medium text-white/90">
-                  IsoLog helps you stay on track with consistent medication for
-                  healthier skin.
-                </p>
-                <StoreBadges className="justify-center" />
-                <p className="text-sm text-white/70">
-                  Free to download · iOS & Android
-                </p>
-              </div>
-            </div>
+        <section
+          id="download"
+          className="relative overflow-hidden bg-[#fff0e8] px-5 py-16 text-center lg:py-24"
+        >
+          <Image
+            src="/cta-bg.png"
+            alt=""
+            fill
+            sizes="100vw"
+            quality={90}
+            className="object-cover opacity-35 mix-blend-multiply"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(255,245,240,0.96)_0%,rgba(255,214,199,0.92)_48%,rgba(255,133,92,0.82)_100%)]"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-orange-200/70"
+          />
+          <Reveal className="relative mx-auto flex max-w-4xl flex-col items-center gap-6">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-950 sm:text-5xl">
+              Start your streak today
+            </h2>
+            <p className="max-w-xl text-xl font-medium text-gray-700">
+              IsoLog helps you stay on track with consistent medication for
+              healthier skin.
+            </p>
+            <StoreBadges className="justify-center" />
+            <p className="text-sm text-gray-600">
+              Free to download · iOS & Android
+            </p>
           </Reveal>
         </section>
       </main>
