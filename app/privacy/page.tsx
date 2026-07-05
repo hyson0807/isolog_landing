@@ -29,7 +29,16 @@ export default function PrivacyPage() {
           <strong>Account Information (only if you sign in):</strong> If you
           are an IsoLog Pro subscriber and sign in with Google or Apple to use
           the sync feature, we collect your email address, name (nickname), and
-          a social account identifier used solely to operate your account.
+          a social account identifier used to operate your account. You can set
+          or change your nickname inside the app; if you appear on a game
+          leaderboard, your nickname is visible to other users.
+        </li>
+        <li>
+          <strong>Game Scores:</strong> Your best scores in the in-app
+          mini-games. If you are an IsoLog Pro subscriber and signed in, your
+          best scores are stored on our servers and displayed on the global
+          leaderboard together with your nickname. For all other users, game
+          scores are stored only on your device.
         </li>
         <li>
           <strong>Device Identifier:</strong> A randomly generated ID is
@@ -53,7 +62,19 @@ export default function PrivacyPage() {
         feature, your medication and skin condition records are transmitted
         over encrypted connections (HTTPS) and stored on servers managed by
         IsoLog, so that your records can be backed up and restored on other
-        devices. If you never sign in, your data never leaves your device.
+        devices. Game best scores of signed-in IsoLog Pro subscribers are also
+        stored on our servers to operate the leaderboard. If you never sign in,
+        your data never leaves your device.
+      </p>
+
+      <h2>Leaderboards</h2>
+      <p>
+        Game leaderboards are visible to all users of the app. A leaderboard
+        entry shows only your nickname and best score — never your email,
+        health records, or any other personal information. Your health and
+        medication data is never shown to other users. You can change your
+        nickname at any time inside the app, and deleting your account removes
+        your leaderboard entries.
       </p>
 
       <h2>Third-Party Services</h2>
@@ -94,7 +115,8 @@ export default function PrivacyPage() {
         Uninstalling the app deletes the data stored on your device. If you
         used sync while signed in, data backed up on our servers is retained so
         you can restore it by signing in again. You can permanently delete your
-        account and all server data at any time in{" "}
+        account and all server data, including synced records and game scores,
+        at any time in{" "}
         <strong>Settings &gt; Account &gt; Delete Account</strong> inside the
         app. Deletion is immediate and cannot be recovered.
       </p>

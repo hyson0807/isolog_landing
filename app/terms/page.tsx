@@ -30,6 +30,7 @@ export default function TermsPage() {
         <li>
           Back up and sync your records across devices (IsoLog Pro, signed in)
         </li>
+        <li>Play mini-games and view global leaderboards</li>
       </ul>
 
       <h2>3. Medical Disclaimer</h2>
@@ -65,7 +66,19 @@ export default function TermsPage() {
         the App, which permanently deletes all data stored on our servers.
       </p>
 
-      <h2>6. Premium Features</h2>
+      <h2>6. Nicknames &amp; Leaderboards</h2>
+      <p>
+        The App includes mini-games with global leaderboards. If you are an
+        IsoLog Pro subscriber and signed in, your best scores are stored on our
+        servers and displayed on the leaderboard together with your nickname,
+        which you can set or change inside the App. You agree not to use a
+        nickname that is offensive, misleading, impersonates another person, or
+        otherwise violates applicable laws. We reserve the right to change or
+        remove inappropriate nicknames and to remove leaderboard entries that
+        we reasonably believe result from cheating or abuse.
+      </p>
+
+      <h2>7. Premium Features</h2>
       <p>
         Some features of the App require a one-time purchase (IsoLog Pro).
         Premium features include:
@@ -74,6 +87,7 @@ export default function TermsPage() {
         <li>Tracking tab with dosage and skin trend charts</li>
         <li>Home dosage summary</li>
         <li>Backup and cross-device sync</li>
+        <li>Saving game scores to the global leaderboard</li>
         <li>Ad-free experience</li>
       </ul>
       <p>
@@ -81,21 +95,21 @@ export default function TermsPage() {
         applicable law or app store policies.
       </p>
 
-      <h2>7. Intellectual Property</h2>
+      <h2>8. Intellectual Property</h2>
       <p>
         All content, features, and functionality of the App are owned by
         IsoLog and are protected by international copyright, trademark, and
         other intellectual property laws.
       </p>
 
-      <h2>8. Limitation of Liability</h2>
+      <h2>9. Limitation of Liability</h2>
       <p>
         To the fullest extent permitted by law, IsoLog shall not be liable for
         any indirect, incidental, special, consequential, or punitive damages
         resulting from your use of or inability to use the App.
       </p>
 
-      <h2>9. Changes to Terms</h2>
+      <h2>10. Changes to Terms</h2>
       <p>
         We reserve the right to modify these Terms of Service at any time. We
         will notify users of any material changes by updating the &quot;Last
@@ -103,7 +117,7 @@ export default function TermsPage() {
         constitutes acceptance of the new terms.
       </p>
 
-      <h2>10. Termination</h2>
+      <h2>11. Termination</h2>
       <p>
         You may stop using the App at any time by uninstalling it from your
         device. Locally stored data is deleted when you uninstall the App. If
@@ -112,7 +126,7 @@ export default function TermsPage() {
         <strong>Settings &gt; Account &gt; Delete Account</strong>.
       </p>
 
-      <h2>11. Contact Information</h2>
+      <h2>12. Contact Information</h2>
       <p>
         For any questions regarding these Terms of Service, please contact us
         at:
