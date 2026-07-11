@@ -72,9 +72,9 @@ export default function TermsPage() {
 
       <h2>6. Nicknames &amp; Leaderboards</h2>
       <p>
-        The App includes mini-games with global leaderboards. If you are an
-        IsoLog Pro subscriber and signed in, your best scores are stored on our
-        servers and displayed on the leaderboard together with your nickname,
+        The App includes mini-games with global leaderboards. If you are signed
+        in, your best scores are stored on our servers and displayed on the
+        leaderboard together with your nickname,
         which you can set or change inside the App. You agree not to use a
         nickname that is offensive, misleading, impersonates another person, or
         otherwise violates applicable laws. We reserve the right to change or
@@ -130,7 +130,6 @@ export default function TermsPage() {
         <li>Tracking tab with dosage and skin trend charts</li>
         <li>Home dosage summary</li>
         <li>Backup and cross-device sync</li>
-        <li>Saving game scores to the global leaderboard</li>
         <li>Ad-free experience</li>
       </ul>
       <p>

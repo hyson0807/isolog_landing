@@ -27,18 +27,18 @@ export default function PrivacyPage() {
         </li>
         <li>
           <strong>Account Information (only if you sign in):</strong> If you
-          are an IsoLog Pro subscriber and sign in with Google or Apple to use
-          the sync feature, we collect your email address, name (nickname), and
-          a social account identifier used to operate your account. You can set
-          or change your nickname inside the app; if you appear on a game
-          leaderboard, your nickname is visible to other users.
+          sign in with Google or Apple — to use cloud sync (IsoLog Pro) or to
+          join a game leaderboard — we collect your email address, name
+          (nickname), and a social account identifier used to operate your
+          account. You can set or change your nickname inside the app; if you
+          appear on a game leaderboard, your nickname is visible to other users.
         </li>
         <li>
           <strong>Game Scores:</strong> Your best scores in the in-app
-          mini-games. If you are an IsoLog Pro subscriber and signed in, your
-          best scores are stored on our servers and displayed on the global
-          leaderboard together with your nickname. For all other users, game
-          scores are stored only on your device.
+          mini-games. If you are signed in, your best scores are stored on our
+          servers and displayed on the global leaderboard together with your
+          nickname. For all other users, game scores are stored only on your
+          device.
         </li>
         <li>
           <strong>Community Content:</strong> If you sign in and use the
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
         feature, your medication and skin condition records are transmitted
         over encrypted connections (HTTPS) and stored on servers managed by
         IsoLog, so that your records can be backed up and restored on other
-        devices. Game best scores of signed-in IsoLog Pro subscribers are also
+        devices. Game best scores of signed-in users are also
         stored on our servers to operate the leaderboard. Community posts,
         comments, and attached photos are stored on our servers (including image
         hosting on Cloudflare R2) so they can be shown to other users. If you
