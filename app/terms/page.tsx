@@ -31,6 +31,10 @@ export default function TermsPage() {
           Back up and sync your records across devices (IsoLog Pro, signed in)
         </li>
         <li>Play mini-games and view global leaderboards</li>
+        <li>
+          Share experiences and ask questions on the community boards (signed
+          in)
+        </li>
       </ul>
 
       <h2>3. Medical Disclaimer</h2>
@@ -78,7 +82,46 @@ export default function TermsPage() {
         we reasonably believe result from cheating or abuse.
       </p>
 
-      <h2>7. Premium Features</h2>
+      <h2>7. Community &amp; User-Generated Content</h2>
+      <p>
+        The App includes community boards where signed-in users can create
+        posts, comments, likes, and attach photos. You retain ownership of the
+        content you create, but you grant IsoLog a non-exclusive, worldwide,
+        royalty-free license to host, store, display, and distribute that
+        content within the App for the purpose of operating the community.
+      </p>
+      <p>You agree that you will not post content that:</p>
+      <ul>
+        <li>
+          Is unlawful, harassing, abusive, threatening, hateful, defamatory, or
+          obscene
+        </li>
+        <li>
+          Infringes any third party&apos;s intellectual property, privacy, or
+          other rights
+        </li>
+        <li>
+          Contains other people&apos;s personal or identifiable health
+          information without their consent
+        </li>
+        <li>
+          Promotes dangerous misuse of medication, or presents itself as
+          professional medical advice
+        </li>
+        <li>Is spam, fraudulent, or commercial solicitation</li>
+      </ul>
+      <p>
+        We have <strong>zero tolerance</strong> for objectionable content and
+        abusive users. You can report any post or comment, and block any user,
+        directly inside the App. We review reported content and will remove
+        content and restrict or remove accounts that violate these Terms,
+        typically within 24 hours. We may remove content or suspend accounts at
+        our discretion, with or without notice. You are solely responsible for
+        the content you post, and IsoLog is not liable for content created by
+        users.
+      </p>
+
+      <h2>8. Premium Features</h2>
       <p>
         Some features of the App require a one-time purchase (IsoLog Pro).
         Premium features include:
@@ -95,21 +138,21 @@ export default function TermsPage() {
         applicable law or app store policies.
       </p>
 
-      <h2>8. Intellectual Property</h2>
+      <h2>9. Intellectual Property</h2>
       <p>
         All content, features, and functionality of the App are owned by
         IsoLog and are protected by international copyright, trademark, and
         other intellectual property laws.
       </p>
 
-      <h2>9. Limitation of Liability</h2>
+      <h2>10. Limitation of Liability</h2>
       <p>
         To the fullest extent permitted by law, IsoLog shall not be liable for
         any indirect, incidental, special, consequential, or punitive damages
         resulting from your use of or inability to use the App.
       </p>
 
-      <h2>10. Changes to Terms</h2>
+      <h2>11. Changes to Terms</h2>
       <p>
         We reserve the right to modify these Terms of Service at any time. We
         will notify users of any material changes by updating the &quot;Last
@@ -117,7 +160,7 @@ export default function TermsPage() {
         constitutes acceptance of the new terms.
       </p>
 
-      <h2>11. Termination</h2>
+      <h2>12. Termination</h2>
       <p>
         You may stop using the App at any time by uninstalling it from your
         device. Locally stored data is deleted when you uninstall the App. If
@@ -126,7 +169,7 @@ export default function TermsPage() {
         <strong>Settings &gt; Account &gt; Delete Account</strong>.
       </p>
 
-      <h2>12. Contact Information</h2>
+      <h2>13. Contact Information</h2>
       <p>
         For any questions regarding these Terms of Service, please contact us
         at:

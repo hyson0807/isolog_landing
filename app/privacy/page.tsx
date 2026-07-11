@@ -41,6 +41,16 @@ export default function PrivacyPage() {
           scores are stored only on your device.
         </li>
         <li>
+          <strong>Community Content:</strong> If you sign in and use the
+          community boards, we collect the content you create — posts, comments,
+          likes, and any photos you choose to attach to a post (up to 5 per
+          post) — along with your nickname. This content is stored on our
+          servers and is publicly visible to other users of the app. Reading the
+          community does not require an account, but posting, commenting, and
+          liking do. If you report or block another user, we store that action
+          to operate our moderation tools.
+        </li>
+        <li>
           <strong>Device Identifier:</strong> A randomly generated ID is
           created for premium feature management. This ID cannot be used to
           identify you personally.
@@ -51,7 +61,11 @@ export default function PrivacyPage() {
       <ul>
         <li>Location data</li>
         <li>Health records beyond what you enter in the app</li>
-        <li>Contacts or photos</li>
+        <li>Contacts</li>
+        <li>
+          Your photo library — we only access the specific photos you choose to
+          attach to a community post
+        </li>
         <li>Browsing history</li>
       </ul>
 
@@ -63,8 +77,10 @@ export default function PrivacyPage() {
         over encrypted connections (HTTPS) and stored on servers managed by
         IsoLog, so that your records can be backed up and restored on other
         devices. Game best scores of signed-in IsoLog Pro subscribers are also
-        stored on our servers to operate the leaderboard. If you never sign in,
-        your data never leaves your device.
+        stored on our servers to operate the leaderboard. Community posts,
+        comments, and attached photos are stored on our servers (including image
+        hosting on Cloudflare R2) so they can be shown to other users. If you
+        never sign in, your medication data never leaves your device.
       </p>
 
       <h2>Leaderboards</h2>
@@ -75,6 +91,25 @@ export default function PrivacyPage() {
         medication data is never shown to other users. You can change your
         nickname at any time inside the app, and deleting your account removes
         your leaderboard entries.
+      </p>
+
+      <h2>Community &amp; User-Generated Content</h2>
+      <p>
+        Anything you post to the community — text, photos, comments, and your
+        nickname — is public and can be seen by other users of the app. Please
+        do not include sensitive personal information (such as your full name,
+        contact details, or identifiable health information) in community posts.
+        Your private medication and skin records are never shared with the
+        community.
+      </p>
+      <p>
+        We do not tolerate objectionable content or abusive behavior. You can
+        report a post or comment, or block another user, directly inside the
+        app. We review reports and remove content or restrict accounts that
+        violate our{" "}
+        <a href="/terms">Terms of Service</a>. You can delete your own posts and
+        comments at any time; deleting your account also removes the community
+        content and photos you created.
       </p>
 
       <h2>Third-Party Services</h2>
@@ -115,8 +150,8 @@ export default function PrivacyPage() {
         Uninstalling the app deletes the data stored on your device. If you
         used sync while signed in, data backed up on our servers is retained so
         you can restore it by signing in again. You can permanently delete your
-        account and all server data, including synced records and game scores,
-        at any time in{" "}
+        account and all server data, including synced records, game scores, and
+        community posts, comments, and photos, at any time in{" "}
         <strong>Settings &gt; Account &gt; Delete Account</strong> inside the
         app. Deletion is immediate and cannot be recovered.
       </p>
