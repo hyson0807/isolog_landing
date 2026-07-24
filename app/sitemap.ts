@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/constants";
 // Fixed content-change dates so crawlers see a stable <lastmod>.
 // Bump these when the corresponding page's content actually changes.
 const HOME_UPDATED = new Date("2026-07-24");
+const CONTENT_UPDATED = new Date("2026-07-24");
 const LEGAL_UPDATED = new Date("2026-07-01");
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,6 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: HOME_UPDATED,
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: `${SITE_URL}/accutane-tracker`,
+      lastModified: CONTENT_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${SITE_URL}/privacy`,

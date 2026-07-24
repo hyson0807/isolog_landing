@@ -19,6 +19,12 @@ export default function Footer() {
           </span>
         </div>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-gray-700">
+          <Link
+            href="/accutane-tracker"
+            className="transition hover:text-brand-dark"
+          >
+            Accutane Tracker Guide
+          </Link>
           <a href={`mailto:${SUPPORT_EMAIL}`} className="transition hover:text-brand-dark">
             Support
           </a>
