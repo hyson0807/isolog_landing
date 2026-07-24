@@ -4,6 +4,8 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Delete Your Account or Data",
+  description:
+    "How to permanently delete your IsoLog account and data, or request deletion of specific data. Account deletion is handled instantly in the app.",
   alternates: { canonical: "/delete-account" },
 };
 

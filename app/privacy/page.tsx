@@ -4,6 +4,8 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  description:
+    "How IsoLog handles your data. Your medication records and skin logs are stored on your device — read our full privacy policy.",
   alternates: { canonical: "/privacy" },
 };
 

@@ -4,6 +4,8 @@ import { SUPPORT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
+  description:
+    "The terms for using IsoLog, the isotretinoin (Accutane) tracking app. IsoLog is an informational tool and not a substitute for medical advice.",
   alternates: { canonical: "/terms" },
 };
 
