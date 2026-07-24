@@ -125,6 +125,14 @@ const STRUCTURED_DATA = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "IsoLog",
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon.png`,
+      sameAs: [APP_STORE_URL, PLAY_STORE_URL],
+    },
+    {
       "@type": "MobileApplication",
       name: "IsoLog",
       operatingSystem: "iOS, Android",
@@ -134,6 +142,7 @@ const STRUCTURED_DATA = {
       url: SITE_URL,
       installUrl: APP_STORE_URL,
       sameAs: [APP_STORE_URL, PLAY_STORE_URL],
+      publisher: { "@id": `${SITE_URL}/#organization` },
       offers: {
         "@type": "Offer",
         price: "0",
@@ -144,6 +153,7 @@ const STRUCTURED_DATA = {
       "@type": "WebSite",
       name: "IsoLog",
       url: SITE_URL,
+      publisher: { "@id": `${SITE_URL}/#organization` },
     },
     {
       "@type": "FAQPage",
