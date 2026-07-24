@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StoreBadges from "@/components/StoreBadges";
@@ -281,7 +282,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-6xl px-5 pt-14 xl:py-24">
             <div className="text-center xl:max-w-xl xl:text-left">
               <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                Stay on track with your isotretinoin journey
+                Your Accutane tracker — never miss a dose
               </h1>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-gray-600 xl:mx-0">
                 Log every dose, get reminded before you forget, and watch
@@ -314,6 +315,13 @@ export default function Home() {
               IsoLog makes that easy: one-tap check-ins, reminders, and a
               clear view of your progress.
             </p>
+            <Link
+              href="/accutane-tracker"
+              className="mt-6 inline-flex items-center gap-1.5 font-semibold text-brand transition hover:text-brand-dark"
+            >
+              Learn how to track your Accutane course
+              <span aria-hidden>→</span>
+            </Link>
           </Reveal>
         </section>
 
