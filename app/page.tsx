@@ -1,10 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StoreBadges from "@/components/StoreBadges";
 import Reveal from "@/components/Reveal";
-import { APP_STORE_URL, PLAY_STORE_URL, SITE_URL } from "@/lib/constants";
+import {
+  APP_STORE_URL,
+  DEVELOPER_URL,
+  PLAY_STORE_URL,
+  SITE_URL,
+} from "@/lib/constants";
+
+// Title, description, and openGraph intentionally fall through to the root
+// layout's defaults — only the canonical is page-specific.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const FEATURE_STORIES = [
   {
@@ -129,13 +141,17 @@ const STRUCTURED_DATA = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: "IsoLog",
+      alternateName: "Iso Log",
       url: SITE_URL,
       logo: `${SITE_URL}/icon.png`,
-      sameAs: [APP_STORE_URL, PLAY_STORE_URL],
+      sameAs: [APP_STORE_URL, PLAY_STORE_URL, DEVELOPER_URL],
     },
     {
       "@type": "MobileApplication",
+      "@id": `${SITE_URL}/#app`,
       name: "IsoLog",
+      // Matches the App Store / Play Store listing name.
+      alternateName: "Accutane Tracking - IsoLog",
       operatingSystem: "iOS, Android",
       applicationCategory: "HealthApplication",
       description:
@@ -143,6 +159,7 @@ const STRUCTURED_DATA = {
       url: SITE_URL,
       installUrl: APP_STORE_URL,
       sameAs: [APP_STORE_URL, PLAY_STORE_URL],
+      author: { "@id": `${SITE_URL}/#organization` },
       publisher: { "@id": `${SITE_URL}/#organization` },
       offers: {
         "@type": "Offer",
@@ -152,9 +169,12 @@ const STRUCTURED_DATA = {
     },
     {
       "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
       name: "IsoLog",
+      alternateName: "Iso Log",
       url: SITE_URL,
       publisher: { "@id": `${SITE_URL}/#organization` },
+      about: { "@id": `${SITE_URL}/#app` },
     },
     {
       "@type": "FAQPage",
@@ -282,7 +302,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-6xl px-5 pt-14 xl:py-24">
             <div className="text-center xl:max-w-xl xl:text-left">
               <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                Your Accutane tracker — never miss a dose
+                IsoLog — your Accutane tracker. Never miss a dose.
               </h1>
               <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-gray-600 xl:mx-0">
                 Log every dose, get reminded before you forget, and watch

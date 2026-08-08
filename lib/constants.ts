@@ -1,5 +1,9 @@
 export const SITE_URL = "https://isolog.app";
 
+// Studio site that publishes IsoLog. Linked from JSON-LD `sameAs` so search
+// engines can tie this domain to the already-indexed publisher entity.
+export const DEVELOPER_URL = "https://www.hyson.kr";
+
 export const APP_STORE_URL = "https://apps.apple.com/app/id6756465278";
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.hyson.isoLog";

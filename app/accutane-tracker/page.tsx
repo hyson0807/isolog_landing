@@ -4,7 +4,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StoreBadges from "@/components/StoreBadges";
 import Reveal from "@/components/Reveal";
-import { SITE_URL, APP_STORE_URL, PLAY_STORE_URL } from "@/lib/constants";
+import {
+  SITE_URL,
+  APP_STORE_URL,
+  DEVELOPER_URL,
+  PLAY_STORE_URL,
+} from "@/lib/constants";
+import { OG_BASE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Accutane Tracker: How to Track Your Isotretinoin Course",
@@ -12,16 +18,20 @@ export const metadata: Metadata = {
     "A practical guide to tracking Accutane (isotretinoin) — cumulative dose, daily doses, reminders, side effects, and alcohol. Plus how IsoLog makes it one tap.",
   alternates: { canonical: "/accutane-tracker" },
   openGraph: {
+    ...OG_BASE,
     type: "article",
     url: `${SITE_URL}/accutane-tracker`,
     title: "Accutane Tracker: How to Track Your Isotretinoin Course",
     description:
       "How to track an Accutane (isotretinoin) course: cumulative dose, daily doses, reminders, side effects, and alcohol — and how IsoLog makes it one tap.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "IsoLog — Accutane tracker" }],
   },
 };
 
 const PAGE_URL = `${SITE_URL}/accutane-tracker`;
+
+// Keep in sync with CONTENT_UPDATED in app/sitemap.ts.
+const PUBLISHED = "2026-07-24";
+const MODIFIED = "2026-07-24";
 
 const STRUCTURED_DATA = {
   "@context": "https://schema.org",
@@ -30,9 +40,10 @@ const STRUCTURED_DATA = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: "IsoLog",
+      alternateName: "Iso Log",
       url: SITE_URL,
       logo: `${SITE_URL}/icon.png`,
-      sameAs: [APP_STORE_URL, PLAY_STORE_URL],
+      sameAs: [APP_STORE_URL, PLAY_STORE_URL, DEVELOPER_URL],
     },
     {
       "@type": "Article",
@@ -41,6 +52,8 @@ const STRUCTURED_DATA = {
         "A practical guide to tracking Accutane (isotretinoin): cumulative dose, daily doses, reminders, side effects, and alcohol.",
       image: `${SITE_URL}/og.png`,
       mainEntityOfPage: PAGE_URL,
+      datePublished: PUBLISHED,
+      dateModified: MODIFIED,
       author: { "@id": `${SITE_URL}/#organization` },
       publisher: { "@id": `${SITE_URL}/#organization` },
     },

@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
-import { SUPPORT_EMAIL } from "@/lib/constants";
+import { SITE_URL, SUPPORT_EMAIL } from "@/lib/constants";
+import { OG_BASE } from "@/lib/seo";
+
+const DESCRIPTION =
+  "The terms for using IsoLog, the isotretinoin (Accutane) tracking app. IsoLog is an informational tool and not a substitute for medical advice.";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description:
-    "The terms for using IsoLog, the isotretinoin (Accutane) tracking app. IsoLog is an informational tool and not a substitute for medical advice.",
+  description: DESCRIPTION,
   alternates: { canonical: "/terms" },
+  openGraph: {
+    ...OG_BASE,
+    type: "website",
+    url: `${SITE_URL}/terms`,
+    title: "Terms of Service | IsoLog",
+    description: DESCRIPTION,
+  },
 };
 
 export default function TermsPage() {

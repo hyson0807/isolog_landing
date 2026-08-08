@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
-import { SUPPORT_EMAIL } from "@/lib/constants";
+import { SITE_URL, SUPPORT_EMAIL } from "@/lib/constants";
+import { OG_BASE } from "@/lib/seo";
+
+const DESCRIPTION =
+  "How IsoLog handles your data. Your medication records and skin logs are stored on your device — read our full privacy policy.";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description:
-    "How IsoLog handles your data. Your medication records and skin logs are stored on your device — read our full privacy policy.",
+  description: DESCRIPTION,
   alternates: { canonical: "/privacy" },
+  openGraph: {
+    ...OG_BASE,
+    type: "website",
+    url: `${SITE_URL}/privacy`,
+    title: "Privacy Policy | IsoLog",
+    description: DESCRIPTION,
+  },
 };
 
 export default function PrivacyPage() {

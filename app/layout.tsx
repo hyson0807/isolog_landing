@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import RedditPixel from "@/components/RedditPixel";
 import { SITE_URL } from "@/lib/constants";
+import { OG_BASE } from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,21 +19,30 @@ export const metadata: Metadata = {
   description:
     "Isotretinoin (Accutane) tracker for acne treatment. Log daily doses, get reminders, track your cumulative dose, and keep a skin diary — on iOS & Android.",
   applicationName: "IsoLog",
-  alternates: {
-    canonical: "/",
-  },
+  // No `alternates.canonical` here on purpose: it would be inherited by every
+  // page, so any page that forgot to override it would self-canonicalize to the
+  // homepage and drop out of the index. Each page declares its own.
   itunes: {
     appId: "6756465278",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
+    ...OG_BASE,
     type: "website",
     url: SITE_URL,
-    siteName: "IsoLog",
-    locale: "en_US",
     title: "IsoLog — Isotretinoin & Accutane Tracker for Acne Treatment",
     description:
       "Dose tracking, smart reminders, cumulative dose, skin diary, and alcohol warnings. Built for people taking isotretinoin for acne.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "IsoLog — Never miss a dose of your isotretinoin course" }],
   },
   twitter: {
     card: "summary_large_image",

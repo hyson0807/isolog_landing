@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
-import { SUPPORT_EMAIL } from "@/lib/constants";
+import { SITE_URL, SUPPORT_EMAIL } from "@/lib/constants";
+import { OG_BASE } from "@/lib/seo";
+
+const DESCRIPTION =
+  "How to permanently delete your IsoLog account and data, or request deletion of specific data. Account deletion is handled instantly in the app.";
 
 export const metadata: Metadata = {
   title: "Delete Your Account or Data",
-  description:
-    "How to permanently delete your IsoLog account and data, or request deletion of specific data. Account deletion is handled instantly in the app.",
+  description: DESCRIPTION,
   alternates: { canonical: "/delete-account" },
+  openGraph: {
+    ...OG_BASE,
+    type: "website",
+    url: `${SITE_URL}/delete-account`,
+    title: "Delete Your Account or Data | IsoLog",
+    description: DESCRIPTION,
+  },
 };
 
 // Google Play 데이터 보안 정책 대응 페이지 — 계정 삭제 URL과 데이터 삭제
