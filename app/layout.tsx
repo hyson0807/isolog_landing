@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import RedditPixel from "@/components/RedditPixel";
 import { SITE_URL } from "@/lib/constants";
 import { OG_BASE } from "@/lib/seo";
 
-const inter = Inter({
-  variable: "--font-inter",
+const instrument = Instrument_Sans({
+  variable: "--font-instrument",
   subsets: ["latin"],
 });
 
@@ -63,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${instrument.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
         {children}
         <RedditPixel />

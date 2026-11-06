@@ -4,7 +4,7 @@ Marketing landing page for [IsoLog](https://apps.apple.com/app/id6756465278) —
 
 ## Pages
 
-- `/` — landing page (hero, features, download CTA)
+- `/` — landing page (pinned scroll hero, promise, feature bento, progress spotlight, FAQ, download CTA)
 - `/privacy` — Privacy Policy
 - `/terms` — Terms of Service
 
@@ -37,7 +37,9 @@ Once enabled, the site fires `PageVisit` on load and a `Custom` event named `Dow
 - `lib/constants.ts` — store URLs, support email, site URL, developer URL, pixel ID
 - `lib/seo.ts` — `OG_BASE`, the shared Open Graph fields
 - `app/page.tsx` — landing page sections
-- `components/` — Header, Footer, StoreBadges, RedditPixel, LegalLayout
+- `components/` — Header, Footer, StoreBadges, RedditPixel, LegalLayout, Reveal
+- `components/landing/` — homepage sections (pinned scroll hero, promise, bento, spotlight, final CTA, floating download card)
+- `lib/useScrollProgress.ts` — scroll-progress hook driving the scroll-linked animations
 
 ### Metadata conventions
 
